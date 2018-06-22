@@ -18,6 +18,8 @@ public class AliasLoader
 	
 		public void load()
 		{
+			if(!PluginData.alias.exists())
+				PluginData.alias.mkdirs();
 			for(File yml : PluginData.alias.listFiles())
 				if(yml.getName().toLowerCase().endsWith(".yml"))
 				{
