@@ -20,8 +20,10 @@ public class CMD_unAlias implements CommandExecutor
 				String alias = args[0];
 				if(Main.getInstance().getAliasManger().containsAlias(alias))
 				{
-					
+					Main.getInstance().getAliasManger().removeAlias(Main.getInstance().getAliasManger().getAliasByString(alias));
 				}
+				else
+					com.sendMessage(Chat.prefix + "Alias doesn't exist");
 			}
 			else
 				com.sendMessage(Chat.prefix + "unalias <Alias>");
