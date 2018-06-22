@@ -8,6 +8,7 @@ import de.morigm.alias.command.CMD_Alias;
 import de.morigm.alias.command.CMD_unAlias;
 import de.morigm.alias.data.PluginData;
 import de.morigm.alias.listener.ClientCommand;
+import de.morigm.alias.listener.ServerCommand;
 import de.morigm.alias.loader.AliasLoader;
 import de.morigm.alias.manager.AliasManager;
 import lombok.Getter;
@@ -42,6 +43,7 @@ public class Main extends JavaPlugin
 	public void loadListener()
 	{
 		Bukkit.getPluginManager().registerEvents(new ClientCommand(), Main.getInstance());
+		Bukkit.getPluginManager().registerEvents(new ServerCommand(), Main.getInstance());
 	}
 	
 	public void loadCommands()
