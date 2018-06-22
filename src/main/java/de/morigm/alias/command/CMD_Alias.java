@@ -46,7 +46,7 @@ public class CMD_Alias implements CommandExecutor
 					}
 					if(args[i].startsWith("\""))
 					{	
-						String text = args[i];
+						String text = args[i] + " ";
 						for(int u = (i + 1);u < args.length;u++)
 						{
 							String t = args[u];
