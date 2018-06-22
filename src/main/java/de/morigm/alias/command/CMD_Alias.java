@@ -57,15 +57,17 @@ public class CMD_Alias implements CommandExecutor
 							if(t.endsWith("\""))
 								t = t.substring(0,t.length() - 1);
 							
+							
 							text += t + " ";
+							
 							if(args[u].endsWith("\""))
 							{
 
 								i = (u - 1);
 								break;
 							}
-							text = text.trim();
 						}
+						text = text.trim();
 						arg.add(text);
 					}
 					arg.add(args[i]);
