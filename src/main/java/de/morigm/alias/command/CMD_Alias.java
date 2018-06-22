@@ -105,7 +105,7 @@ public class CMD_Alias implements CommandExecutor
 			{
 				Alias a = new Alias(command, permission, alias, client, server);
 				Main.getInstance().getAliasManger().addAlias(a);
-				com.sendMessage("Alias was added");
+				com.sendMessage(Chat.prefix + "Alias was added");
 			}
 			else
 				com.sendMessage(Chat.prefix + "Alias already exists");
