@@ -41,7 +41,7 @@ public class CMD_Alias implements CommandExecutor
 					}
 					if(args[i].equals("-p") || args[i].equals("-permission"))
 					{
-						map.put("-r",args[++i]);
+						map.put("-p",args[++i]);
 						continue;
 					}
 					if(args[i].startsWith("\""))
