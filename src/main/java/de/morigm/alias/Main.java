@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import de.morigm.alias.chat.Chat;
 import de.morigm.alias.data.PluginData;
 import de.morigm.alias.loader.AliasLoader;
+import de.morigm.alias.manager.AliasManager;
 import lombok.Getter;
 
 public class Main extends JavaPlugin
@@ -12,6 +13,7 @@ public class Main extends JavaPlugin
 	
 	@Getter private static Main instance;
 	@Getter private AliasLoader AliasLoader;
+	@Getter private AliasManager AliasManger;
 
 	@Override
 	public void onEnable() 
@@ -20,6 +22,7 @@ public class Main extends JavaPlugin
 		PluginData.load();
 		this.AliasLoader = new AliasLoader();
 		this.AliasLoader.load();
+		this.AliasManger = new AliasManager();
 		Chat.writeMessage("Plugin is started");
 	}
 	

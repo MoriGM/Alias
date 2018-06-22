@@ -1,0 +1,34 @@
+package de.morigm.alias.command;
+
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+
+import de.morigm.alias.Main;
+import de.morigm.alias.chat.Chat;
+
+public class CMD_unAlias implements CommandExecutor
+{
+
+	@Override
+	public boolean onCommand(CommandSender com, Command cmd, String label, String[] args) 
+	{
+		if(com.hasPermission("alias.unalias"))
+		{
+			if(args.length >= 1)
+			{
+				String alias = args[0];
+				if(Main.getInstance().getAliasManger().containsAlias(alias))
+				{
+					
+				}
+			}
+			else
+				com.sendMessage(Chat.prefix + "unalias <Alias>");
+		}
+		else
+			Chat.writeMessage(Chat.no_permission);
+		return false;
+	}
+
+}
