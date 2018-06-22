@@ -49,13 +49,22 @@ public class CMD_Alias implements CommandExecutor
 						String text = args[i];
 						for(int u = (i + 1);u < args.length;u++)
 						{
-							text += args[u];
+							String t = args[u];
+							
+							if(t.startsWith("\""))
+								t = t.substring(1,t.length());
+							
+							if(t.endsWith("\""))
+								t = t.substring(0,t.length() - 1);
+							
+							text += t + " ";
 							if(args[u].endsWith("\""))
 							{
 
 								i = (u - 1);
 								break;
 							}
+							text = text.trim();
 						}
 						arg.add(text);
 					}

@@ -31,6 +31,9 @@ public class AliasLoader
 		
 		public void save()
 		{
+			for(File f : PluginData.alias.listFiles())
+				if(f.exists())
+					f.delete();
 			for(Alias a : alias)
 			{
 				FileConfiguration config = YamlConfiguration.loadConfiguration(new File(PluginData.alias,a.getAlias() + ".yml"));
