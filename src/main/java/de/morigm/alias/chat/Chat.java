@@ -8,7 +8,7 @@ import de.morigm.alias.Main;
 public class Chat 
 {
 	
-	public static final String prefix = ChatColor.DARK_GRAY + "[" + ChatColor.BLUE + "Magna" + ChatColor.DARK_GRAY +  "] " + ChatColor.WHITE;
+	public static final String prefix = ChatColor.DARK_GRAY + "[" + ChatColor.BLUE + "Alias" + ChatColor.DARK_GRAY +  "] " + ChatColor.WHITE;
 	public static final String name = Main.getInstance().getDescription().getName();
 	public static final String version = Main.getInstance().getDescription().getVersion();
 	public static final String no_console = "You must be a Player";
