@@ -12,6 +12,7 @@ import org.bukkit.entity.Player;
 
 import de.morigm.alias.Main;
 import de.morigm.alias.api.Alias;
+import de.morigm.alias.api.helper.StringHelper;
 import de.morigm.alias.chat.Chat;
 
 public class CMD_Alias implements CommandExecutor
@@ -90,7 +91,7 @@ public class CMD_Alias implements CommandExecutor
 		if(args.length >= 2)
 		{
 			String alias = args[0];
-			String command = args[1];
+			String command = StringHelper.StringArrayToString(args, " ", 1);
 			String permission = (map.containsKey("-p") ? map.get("-p") : "");
 			boolean server = list.contains("-s");
 			boolean client = list.contains("-c");

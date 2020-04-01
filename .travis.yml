@@ -1,14 +1,19 @@
 language: java
-os:
-- linux
-jdk:
-- openjdk8
-- openjdk9
-- oraclejdk8
-- oraclejdk9
-
-branches:
-        only:
-        - master
 script:
 - mvn install
+os: linux
+cache:
+    directories:
+        - $HOME/.m2
+git:
+    depth: 1
+    submodules: false
+jdk:
+- oraclejdk14
+- openjdk11
+- openjdk8
+- oraclejdk13
+sudo: false
+branches:
+    only:
+    - master
